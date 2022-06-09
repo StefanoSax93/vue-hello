@@ -16,8 +16,7 @@ const appVue = new Vue({
         inputSurname: '',
         randomImage: ''
     },
-    //immagine da inserire al click
-    //https://picsum.photos/800/600
+    
     methods: {
         generateName: function () {
             this.name= this.inputName + ' ' + this.inputSurname;
@@ -25,7 +24,10 @@ const appVue = new Vue({
             this.name = this.name.toUpperCase();
         },
         generateImage: function() {
-            this.randomImage = 'https://picsum.photos/800/600';
+            this.randomImage = 'https://picsum.photos/600/400';
+        },
+        removeImage: function() {
+            this.randomImage = '';
         }
     },
 });

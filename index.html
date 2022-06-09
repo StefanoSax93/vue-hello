@@ -23,11 +23,13 @@
                 </div>
             </div>
             
-            
             <h1 :class="messageStyle">{{name}}</h1>
         </div>
-        <div class="d-flex flex-column">
-            <button class="btn btn-primary my-3 align-self-center" @click="generateImage">Genera Immagine</button>
+        <div class="d-flex flex-column align-items-center">
+            <div class="my-3">
+                <button class="btn btn-success me-3" @click="generateImage">Genera Immagine</button>
+                <button class="btn btn-danger" @click="removeImage">Annula</button>
+            </div>
             <img class="rounded" :src="randomImage" alt="">
         </div>
         
