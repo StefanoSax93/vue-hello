@@ -24,7 +24,9 @@ const appVue = new Vue({
             this.name = this.name.toUpperCase();
         },
         generateImage: function() {
-            this.randomImage = 'https://picsum.photos/600/400';
+            //genero un numero casuale da 1 a 500
+            let randomNumber = Math.floor(Math.random() * 500) + 1;
+            this.randomImage = `https://picsum.photos/id/${randomNumber}/600/400`;
         },
         removeImage: function() {
             this.randomImage = '';
