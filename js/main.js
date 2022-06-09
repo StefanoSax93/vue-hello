@@ -10,8 +10,22 @@ const appVue = new Vue({
     el: '#main',
 
     data: {
-        message: 'Hello Vue!',
+        name: '',
         messageStyle: 'text-success display-1 font-weight-bold',
-        randomImage: 'https://picsum.photos/800/600'
-    }
+        inputName: '',
+        inputSurname: '',
+        randomImage: ''
+    },
+    //immagine da inserire al click
+    //https://picsum.photos/800/600
+    methods: {
+        generateName: function () {
+            this.name= this.inputName + ' ' + this.inputSurname;
+            //voglio che il testo sia in maiuscolo
+            this.name = this.name.toUpperCase();
+        },
+        generateImage: function() {
+            this.randomImage = 'https://picsum.photos/800/600';
+        }
+    },
 });

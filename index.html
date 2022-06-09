@@ -12,8 +12,25 @@
 <body>
     
     <div class="container text-center" id="main">
-        <h1 :class="messageStyle">{{message}}</h1>
-        <img :src="randomImage" alt="">
+        <div>
+            <div class="row align-items-center">
+                <div class="col-10">
+                    <input class="w-100 my-2 form-control" type="text" placeholder="Inserisci il tuo nome" v-model="inputName">
+                    <input class="w-100 form-control" type="text"placeholder="Inserisci il tuo cognome" v-model="inputSurname">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary mt-3" @click="generateName">Genera Nome</button>
+                </div>
+            </div>
+            
+            
+            <h1 :class="messageStyle">{{name}}</h1>
+        </div>
+        <div class="d-flex flex-column">
+            <button class="btn btn-primary my-3 align-self-center" @click="generateImage">Genera Immagine</button>
+            <img class="rounded" :src="randomImage" alt="">
+        </div>
+        
     </div>
     <script src="js/main.js"></script>
 </body>
