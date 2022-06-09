@@ -11,7 +11,7 @@ const appVue = new Vue({
 
     data: {
         name: '',
-        messageStyle: 'text-success display-1 font-weight-bold',
+        messageStyle: 'text-success display-1 font-weight-bold text-uppercase',
         inputName: '',
         inputSurname: '',
         randomImage: ''
@@ -20,8 +20,6 @@ const appVue = new Vue({
     methods: {
         generateName: function () {
             this.name= this.inputName + ' ' + this.inputSurname;
-            //voglio che il testo sia in maiuscolo
-            this.name = this.name.toUpperCase();
         },
         generateImage: function() {
             //genero un numero casuale da 1 a 500
