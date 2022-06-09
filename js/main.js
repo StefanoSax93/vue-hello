@@ -12,5 +12,6 @@ const appVue = new Vue({
     data: {
         message: 'Hello Vue!',
         messageStyle: 'text-success display-1 font-weight-bold',
+        randomImage: 'https://picsum.photos/800/600'
     }
 });
